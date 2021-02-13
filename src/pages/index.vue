@@ -68,7 +68,6 @@
 							<ProjectCard
 								title="Emoji Bot"
 								url="https://emojibot.xyz"
-								color="emerald-500"
 								description="A Discord bot that does everything about emojis! Supports English and Turkish."
 							/>
 							<ProjectCard
@@ -77,31 +76,26 @@
 								class="cursor-not-allowed"
 								content="Work in progress, please check back later."
 								v-tippy="{ placement : 'top',  arrow: true }"
-								color="emerald-500"
 								description="My personal <strong>Turkish</strong> blog that I write about my personal recommendations, opinions etc."
 							/>
 							<ProjectCard
 								title="Flowey's Time Machine"
 								url="https://floweystimemachine.github.io"
-								color="emerald-500"
 								:description="floweydesc"
 							/>
 							<ProjectCard
 								title="Music Downloader"
 								url="https://github.com/ardasoyturk/music-downloader"
-								color="emerald-500"
 								description="A simple music downloader for YouTube based on youtube-dl. Built with Node.js"
 							/>
 							<ProjectCard
 								title="Bing Wallpaper"
 								url="https://github.com/ardasoyturk/bing-wallpaper"
-								color="emerald-500"
 								description="A program that changes your desktop wallpaper with the Bing's image of the day."
 							/>
 							<ProjectCard
 								title="Custom Image Uploader"
 								url="https://github.com/ardasoyturk/custom-image-uploader"
-								color="emerald-500"
 								description='A basic server boilerplate for auto-uploading images to cloud. Designed for <a href="https://getsharex.com">ShareX</a>-like programs.'
 							/>
 						</div>

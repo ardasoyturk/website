@@ -4,7 +4,7 @@
         :target="url.startsWith('http') ? '_blank' : ''"
         rel="nofollow"
         :href="url"
-        :class="`bg-gradient-to-r from-${color} via-${color.split('-')[0] + '-' + (Number(color.split('-')[1])+100)} to-${color.split('-')[0] + '-' + (Number(color.split('-')[1])+200)} rounded-lg shadow-lg ${truncate?'truncate':''} mx-auto select-none cursor-pointer transition duration-200 hover:translate-y-1 transform `"
+        :class="`bg-gradient-to-r from-emerald-500 via-emerald-600 to-emerald-700 rounded-lg shadow-lg ${truncate?'truncate':''} mx-auto select-none cursor-pointer transition duration-200 hover:translate-y-1 transform `"
       >
         <div class="relative rounded-lg">
           <div class="p-4 leading-tight">

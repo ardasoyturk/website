@@ -3,12 +3,12 @@ import { resolve } from 'path';
 export default {
 	srcDir: 'src',
 	target: 'static',
+	ssr: true,
 	head: {
 		title: 'ardasoyturk.com',
 		meta: [
 			{ charset: 'utf-8' },
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
-			{ hid: 'description', name: 'description', content: '' },
 		],
 		link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
 	},
