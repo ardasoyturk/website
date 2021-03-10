@@ -3,7 +3,7 @@
 		<full-page ref="fullPage" :options="fullpageOptions">
 			<div class="section">
 				<div
-					class="flex flex-col justify-between w-1/2 mx-auto rounded-full sm:flex-row"
+					class="flex flex-col justify-between w-2/3 mx-auto rounded-full lg:w-1/2 sm:flex-row"
 				>
 					<div
 						class="w-full text-4xl font-bold text-center sm:w-3/5 sm:text-left"
@@ -14,19 +14,19 @@
 						</div>
 					</div>
 					<div class="mt-8 sm:mt-0">
-						<Avatar class="w-48 rounded-full" draggable="false" />
+						<Avatar class="hidden w-48 rounded-full md:block" draggable="false" />
 					</div>
 				</div>
 				<div class="flex items-center justify-center">
-					<a class="absolute cursor-pointer bottom-10 scroll" @click="moveDown"></a>
+					<a class="absolute cursor-pointer bottom-5 scroll" @click="moveDown"></a>
 				</div>
 			</div>
 			<div class="section">
-				<div class="grid h-screen grid-cols-2">
+				<div class="flex items-center justify-center h-screen lg:grid lg:grid-cols-2">
 					<div class="my-auto space-y-3">
 						<div>
 							<h1 class="text-3xl text-center font-quicksand">About Me</h1>
-							<p class="w-2/3 mx-auto mt-2">
+							<p class="w-11/12 mx-auto mt-2 sm:w-2/3">
 								I'm a 14-year-old back-end developer who wants to be a software
 								engineer in the future. I enjoy playing and making stuff with
 								<a
@@ -46,13 +46,13 @@
 								and this is the first project I made with it.
 							</p>
 						</div>
-						<div>
+						<div class="hidden sm:block">
 							<h1 class="text-3xl text-center font-quicksand">Technologies that I use</h1>
 							<ul class="grid items-center w-4/5 grid-cols-5 gap-3 mx-auto mt-2">
 								<div v-ripple v-for="tech in technologies" :key="tech.name">
-									<li class="flex flex-col items-center justify-center w-full space-y-2 bg-gray-200 rounded-md cursor-pointer select-none h-28 hover:bg-gray-300 focus:outline-none focus:ring focus:ring-gray-400">
+									<li class="flex flex-col items-center justify-center w-full bg-gray-200 rounded-md cursor-pointer select-none lg:h-28 hover:bg-gray-300 focus:outline-none focus:ring focus:ring-gray-400">
 										<img draggable="false" :src="require(`~/assets/icons/${tech.icon}.svg`)" :alt="`${tech.icon[0].toUpperCase() + tech.icon.slice(1) + ' Icon'}`" class="w-16 h-16 rounded-sm" />
-										<span>{{ tech.name }}</span>
+										<span class="hidden lg:block">{{ tech.name }}</span>
 									</li>
 								</div>
 							</ul>
@@ -62,9 +62,9 @@
 							<Icons />
 						</div>
 					</div>
-					<div class="my-auto">
+					<div class="hidden my-auto sm:block">
 						<h1 class="text-3xl text-center font-quicksand">My Projects</h1>
-						<div class="grid w-11/12 grid-cols-2 gap-2 mx-auto mt-2">
+						<div class="grid w-11/12 h-auto grid-cols-2 gap-2 mx-auto mt-2 sm:h-3/4">
 							<ProjectCard
 								title="Emoji Bot"
 								url="https://emojibot.xyz"
@@ -82,6 +82,7 @@
 								title="Flowey's Time Machine"
 								url="https://floweystimemachine.github.io"
 								:description="floweydesc"
+								class="hidden lg:block"
 							/>
 							<ProjectCard
 								title="Music Downloader"
@@ -92,6 +93,7 @@
 								title="Bing Wallpaper"
 								url="https://github.com/ardasoyturk/bing-wallpaper"
 								description="A program that changes your desktop wallpaper with the Bing's image of the day."
+								class="hidden lg:block"
 							/>
 							<ProjectCard
 								title="Custom Image Uploader"
@@ -102,87 +104,12 @@
 					</div>
 				</div>
 				<div class="flex items-center justify-center">
-					<a class="absolute transform cursor-pointer bottom-10 gotop" @click="goTop"></a>
+					<a class="absolute transform cursor-pointer bottom-5 gotop" @click="goTop"></a>
 				</div>
 			</div>
 		</full-page>
 	</div>
 </template>
-
-	<!-- <div class="w-full min-h-screen bg-gray-100">
-		<div class="flex items-center justify-center w-full h-full min-h-screen ">
-			<Header />
-			<div
-				class="flex flex-col justify-between w-1/2 mx-auto rounded-full sm:flex-row"
-			>
-				<div
-					class="w-full text-4xl font-bold text-center sm:w-3/5 sm:text-left"
-				>
-					<div class="leading-snug">
-						Hello there! I'm Arda.
-					</div>
-					<div class="leading-snug text-blue-500">Welcome to my <a href="">website</a>.</div>
-				</div>
-				<div class="mt-8 sm:mt-0">
-					<Logo class="w-48 rounded-full" draggable="false" />
-				</div>
-			</div>
-			<a class="fixed bottom-10 scroll"></a>
-		</div>
-	</div> -->
-
-<!-- 	<div class="flex items-center w-full h-full min-h-screen bg-arda">
-		<Header />
-		 <div v-if="$fetchState.pending" class="flex items-center justify-center mx-auto text-white">
-			<div class="flex items-center space-x-2 dark:text-gray-200">
-				<fa-icon :icon="['fas', 'sync']" class="animate-spin" />
-				<h2 class="text-lg font-semibold">Fetchings songs...</h2>
-			</div>
-  	</div>
-		<div v-else-if="$fetchState.error">
-			cekemedik
-		</div>
-		<div v-else class="flex items-center justify-center w-full h-full">
-			<div class="relative left-5 skill-card rounded-xl">
-				<div>
-					<h1 class="text-xl tracking-wide text-white uppercase">Using</h1>
-					<ul>
-						<li>nodejs</li>
-						<li>vuejs</li>
-						<li>tailwindcss</li>
-						<li>bok</li>
-					</ul>
-				</div>
-				<div>
-					<h1 class="text-xl tracking-wide text-white uppercase">Learning</h1>
-					<ul>
-						<li>rust</li>
-						<li>typescript</li>
-						<li>reactjs</li>
-						<li>bok</li>
-					</ul>
-				</div>
-			</div>
-			<div class="card">
-				<Logo class="logo" />
-				<h1 class="title">Arda Soytürk</h1>
-				<h3 @click="changeText()" class="subtitle">{{ rank }}</h3>
-				<Icons class="icons" />
-				<div class="grid w-2/3 grid-flow-col gap-5 py-5 mx-auto buttons">
-						<nuxt-link to="/blog" class="text-xl font-medium text-center text-gray-100 font-poppins">My Personal Blog</nuxt-link>
-						<nuxt-link to="/projects" class="text-xl font-medium text-center text-gray-100 font-poppins">My Projects</nuxt-link>
-				</div>
-			</div>
-			<div class="relative right-5 skill-card rounded-xl">
-				<h1 class="text-xl tracking-wide text-center text-white uppercase">GitHub Repositories</h1>
-				<div class="grid grid-flow-row grid-cols-1 gap-2 py-3 mr-0 repo">
-					<a v-for="repo in repos" :key="repo">
-						<a :href="repo.html_url" target="_blank">{{repo.name}}</a>
-					</a>
-				</div>
-			</div>
-		</div>
-	</div> -->
 
 <script>
 export default {
@@ -252,8 +179,8 @@ export default {
 	--scroll-color: #333;
 }
 .scroll {
-	width: 60px;
-	height: 60px;
+	width: 40px;
+	height: 40px;
 	border: 2px solid var(--scroll-color);
 	border-radius: 50%;
 	animation: down 1.5s infinite;
@@ -261,10 +188,10 @@ export default {
 	&::before {
 		content: "";
 		position: absolute;
-		top: 15px;
-		left: 18px;
-		width: 18px;
-		height: 18px;
+		top: 10px;
+		left: 12px;
+		width: 12px;
+		height: 12px;
 		border-left: 2px solid var(--scroll-color);
 		border-bottom: 2px solid var(--scroll-color);
 		transform: rotate(-45deg);
@@ -272,8 +199,8 @@ export default {
 }
 
 .gotop {
-	width: 60px;
-	height: 60px;
+	width: 40px;
+	height: 40px;
 	border: 2px solid var(--scroll-color);
 	border-radius: 50%;
 	animation: up 1.5s infinite;
@@ -281,10 +208,10 @@ export default {
 	&::before {
 		content: '';
 		position: absolute;
-		bottom: 15px;
-		left: 18px;
-		width: 18px;
-		height: 18px;
+		bottom: 10px;
+		left: 12px;
+		width: 12px;
+		height: 12px;
 		border-right: 2px solid #333;
   	border-top: 2px solid #333;
 		transform: rotate(-45deg);
