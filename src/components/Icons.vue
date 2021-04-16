@@ -1,10 +1,10 @@
 <template>
-    <div class="mx-auto space-x-2 text-4xl text-center select-none">
-		<a class="text-blurple hover:text-opacity-80" content="Discord" v-tippy="{ placement : 'top',  arrow: true }" :href="getURL('discord')"><fa-icon :icon="['fab', 'discord']" class="-my-0.5" /></a>
-		<a class="text-telegram hover:text-opacity-80" content="Twitter" v-tippy="{ placement : 'top',  arrow: true }" :href="getURL('twitter')"><fa-icon :icon="['fab', 'twitter']" /></a>
-		<a class="text-gray-900 hover:text-opacity-80" content="GitHub" v-tippy="{ placement : 'top',  arrow: true }" :href="getURL('github')"><fa-icon :icon="['fab', 'github']" /></a>
-		<a class="text-green-500 hover:text-opacity-80" content="Spotify" v-tippy="{ placement : 'top',  arrow: true }" :href="getURL('spotify')"><fa-icon :icon="['fab', 'spotify']" /></a>
-    <a class="text-red-600 hover:text-opacity-80" content="E-Mail" v-tippy="{ placement : 'top',  arrow: true }" :href="getURL('mail')"><fa-icon :icon="['far', 'envelope']" /></a>
+    <div class="flex justify-center space-x-1.5 text-xl text-center select-none">
+		<a content="Discord" v-tippy="{ placement : 'bottom',  arrow: true }" :href="getURL('discord')"><unicon name="discord" fill="#7289DA" width="32" height="32" icon-style="monochrome"></unicon></a>
+		<a content="Twitter" v-tippy="{ placement : 'bottom',  arrow: true }" :href="getURL('twitter')"><unicon name="twitter" fill="#06B6D4" width="32" height="32" icon-style="line"></unicon></a>
+		<a content="GitHub" v-tippy="{ placement : 'bottom',  arrow: true }" :href="getURL('github')"><unicon name="github" fill="#111827" width="32" height="32" icon-style="line"></unicon></a>
+		<a content="Spotify" class="self-center" v-tippy="{ placement : 'bottom',  arrow: true }" :href="getURL('spotify')"><unicon name="spotify" width="29" height="29" icon-style="line"></unicon></a>
+    <!-- <a content="E-Mail" v-tippy="{ placement : 'bottom',  arrow: true }" :href="getURL('mail')"><unicon name="envelope" fill="#DC2626" width="32" height="32" icon-style="line"></unicon></a> -->
    </div>
 </template>
 
@@ -18,7 +18,7 @@ export default {
         github: 'https://github.com/ardasoyturk',
         spotify: 'https://open.spotify.com/user/zsfhpjxcu5uvcwjnlt5k2vvt9',
         telegram: 'https://t.me/ardasoyturk',
-        mail: 'mailto:mail@ardasoyturk.com'
+        /* mail: 'mailto:' */
       },
     };
   },
