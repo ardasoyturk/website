@@ -5,12 +5,12 @@
 				class="grid w-full h-full grid-cols-1 place-items-center place-content-center lg:h-1/2"
 			>
 				<div class="-mt-5 lg:mt-10 space-y-1.5">
-					<Avatar class="w-48 mx-auto rounded-full 2xl:w-96" />
+					<Avatar class="w-40 mx-auto rounded-full 2xl:w-96" />
 					<div class="text-center">
 						<h1 class="2xl:text-6xl text-2xl text-[#12233c] font-poppins">Arda Soyturk</h1>
 						<vue-typer
 							:text="ranks"
-							class="2xl:text-4xl text-xl mb-1.5 font-poppins"
+							class="2xl:text-4xl text-lg mb-1.5 font-poppins"
 						></vue-typer>
 						<Icons class="mt-1.5" />
 					</div>
@@ -19,12 +19,12 @@
 					<a class="absolute cursor-pointer bottom-5 scroll"></a>
 				</div>
 			</section>
-			<section class="grid w-full grid-cols-1 lg:mt-3 lg:grid-cols-2 h-1/2">
-				<div class="px-5 py-1.5 space-y-3 lg:space-y-1">
+			<section class="grid w-full grid-cols-1 lg:grid-cols-2 h-1/2">
+				<div class="w-11/12 px-5 py-1.5 space-y-9 lg:space-y-1">
 					<div class="mt-3">
-						<h5 class="text-2xl font-semibold 2xl:text-5xl font-poppins">About me</h5>
+						<h5 class="text-xl font-semibold 2xl:text-5xl font-poppins">About me</h5>
 						<p
-							class="2xl:text-3xl w-full lg:w-5/6 pl-2.5 pr-1.5 font-roboto border-l-4 rounded-l-sm border-purple-700"
+							class="text-sm 2xl:text-3xl w-full lg:w-5/6 pl-2.5 pr-1.5 font-roboto border-l-4 rounded-l-sm border-purple-700"
 						>
 							I'm a 15-year-old back-end developer who wants to be a software
 							engineer in the future. I enjoy playing and making stuff with
@@ -46,7 +46,7 @@
 						</p>
 					</div>
 					<div>
-						<h5 class="text-2xl font-semibold 2xl:text-5xl font-poppins">Positions</h5>
+						<h5 class="text-xl font-semibold 2xl:text-5xl font-poppins">Positions</h5>
 						<div
 							class="grid grid-flow-col grid-rows-2 gap-x-3 lg:gap-x-0 gap-y-1 lg:gap-y-3"
 						>
@@ -56,11 +56,11 @@
 									:class="`block ${!position.url ? 'cursor-not-allowed ' : ''}2xl:text-3xl pl-2.5 pr-1.5 border-l-4 rounded-l-sm border-lightBlue-400`"
 								>
 									<span
-										class="text-lg font-semibold text-gray-800 font-poppins"
+										class="font-semibold text-gray-800 font-poppins"
 										:title="position.title"
 										>{{ position.title }}</span
 									>
-									<div class="font-roboto" :title="position.role">
+									<div class="text-sm font-roboto" :title="position.role">
 										{{ position.role }}
 									</div>
 								</a>
@@ -68,8 +68,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="px-5 py-5 space-y-3">
-					<h5 class="text-2xl font-semibold 2xl:text-5xl font-poppins">Projects</h5>
+				<div class="w-11/12 px-5 py-5 space-y-1.5">
+					<h5 class="text-xl font-semibold 2xl:text-5xl font-poppins">Projects</h5>
 					<div class="grid grid-rows-2 lg:grid-flow-col lg:gap-y-1.5 gap-y-3">
 						<div v-for="project in projects" :key="project.title">
 							<a
@@ -77,12 +77,12 @@
 								class="block 2xl:text-3xl pl-2.5 pr-1.5 border-l-4 rounded-l-sm border-red-500"
 							>
 								<span
-									class="text-lg font-semibold text-gray-800 font-poppins"
+									class="font-semibold text-gray-800 font-poppins"
 									:title="project.title"
 									>{{ project.title }}</span
 								>
 								<p
-									class="font-roboto"
+									class="text-sm font-roboto"
 									v-html="project.description"
 								>
 									{{ project.description }}

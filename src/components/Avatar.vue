@@ -1,3 +1,3 @@
 <template>
-  <img src="~/assets/icon.png" class="shadow-md" />
+  <img draggable="false" src="~/assets/icon.png" class="shadow-md" />
 </template>
