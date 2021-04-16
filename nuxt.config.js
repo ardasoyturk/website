@@ -5,7 +5,7 @@ export default {
 	target: 'static',
 	ssr: true,
 	head: {
-		title: 'ardasoyturk.com',
+		title: 'Arda Soyturk',
 		meta: [
 			{ charset: 'utf-8' },
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -23,10 +23,19 @@ export default {
 		{
 			src: '@/plugins/Tippy',
 			mode: 'client',
+		},
+		{
+			src: '@/plugins/Unicons',
+			mode: 'client',
+		},
+		{
+			src: '@/plugins/Typer',
+			mode: 'client',
 		}
 	],
 	tailwindcss: {
 		configPath: resolve('./tailwind.config.js'),
+		jit: true
 	},
 	pwa: {
 		manifest: {
@@ -43,9 +52,8 @@ export default {
 
 	modules: [
 		'@nuxtjs/axios',
+		'@nuxt/postcss8',
 		'@nuxtjs/pwa',
-		'@nuxtjs/fontawesome',
-		'nuxt-fullpage.js',
 		'@nuxt/content',
 	],
 
@@ -74,18 +82,6 @@ export default {
 					},
 				],
 			],
-		},
-	},
-
-	fontawesome: {
-		component: 'fa',
-		suffix: true,
-		icons: {
-			solid: ['faCalendar', 'faLink', 'faSync'],
-			regular: ['faClock', 'faEnvelope'],
-			light: [],
-			duotone: [],
-			brands: ['faTwitter', 'faDiscord', 'faGithub', 'faSpotify', 'faTelegram'],
 		},
 	},
 
