@@ -39,8 +39,8 @@ export default {
 	},
 	pwa: {
 		manifest: {
-			name: 'ardasoyturk.com',
-			short_name: 'ardasoyturk.com',
+			name: 'arda.codes',
+			short_name: 'arda.codes',
 			theme_color: '#1d4ed8',
 			lang: 'en',
 		},
