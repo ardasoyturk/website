@@ -4,10 +4,6 @@ module.exports = {
     extend: {
       colors: {
         ...colors,
-        blurple: '#7289da',
-        arda: '#12233c',
-        cardBg: '#202020',
-        telegram: '#179cde'
       },
     },
     fontFamily: {
