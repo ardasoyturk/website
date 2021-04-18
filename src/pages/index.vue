@@ -30,14 +30,14 @@
 							engineer in the future. I enjoy playing and making stuff with
 							<a
 								href="https://nodejs.org"
-								rel="nofollow"
+								rel="noreferrer"
 								target="_blank"
 								class="text-blue-800 hover:text-blue-900"
 								>Node.js</a
 							>. Recently I learned about
 							<a
 								href="https://vuejs.org"
-								rel="nofollow"
+								rel="noreferrer"
 								target="_blank"
 								class="text-blue-800 hover:text-blue-900"
 								>Vue.js</a

@@ -54,7 +54,23 @@ export default {
 		'@nuxtjs/axios',
 		'@nuxt/postcss8',
 		'@nuxtjs/pwa',
+		'@nuxtjs/sitemap',
+		'@nuxtjs/robots',
 		'@nuxt/content',
+		[
+      "nuxt-social-meta",
+      {
+        url: "https://arda.codes",
+        title: "Arda Soyturk",
+        /* site_name: "Arda Soyturk", */
+        description: "I'm Arda, 15-year-old student interested in programming.",
+        /* img: "Link to image in static folder", */
+        locale: "en_US",
+        twitter: "@soyturkarda_",
+        /* twitter_card: "summary_large_image", */
+        themeColor: "#12233c",
+      },
+    ],
 	],
 
 	axios: {},
@@ -67,6 +83,7 @@ export default {
 			Inter: true,
 			Quicksand: true,
 		},
+		display: 'swap'
 	},
 
 	content: {
