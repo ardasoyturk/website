@@ -88,7 +88,7 @@ export default {
 
 	content: {
 		liveEdit: false,
-		markdown: {
+		/* markdown: {
 			remarkPlugins: [
 				'remark-emoji',
 				'remark-images',
@@ -99,7 +99,7 @@ export default {
 					},
 				],
 			],
-		},
+		}, */
 	},
 
 	build: {},
