@@ -2,15 +2,17 @@
 	<div class="w-full min-h-screen">
 		<div class="w-full h-screen">
 			<section
-				class="grid w-full h-full grid-cols-1 place-items-center place-content-center lg:h-1/2"
+				class="grid w-full h-full grid-cols-1 md:px-10 place-items-center place-content-center lg:h-1/2"
 			>
 				<div class="-mt-5 lg:mt-10 space-y-1.5">
 					<Avatar class="w-40 mx-auto rounded-full 2xl:w-64" />
 					<div class="text-center">
-						<h1 class="2xl:text-4xl text-2xl text-[#12233c] font-poppins">Arda Soyturk</h1>
+						<h1 class="2xl:text-4xl lg:text-3xl text-2xl text-[#12233c] font-poppins">Arda Soyturk</h1>
 						<vue-typer
 							:text="ranks"
-							class="2xl:text-2xl text-lg mb-1.5 font-poppins"
+							:type-delay="60"
+    					:pre-erase-delay="2000"
+							class="2xl:text-2xl lg:text-xl text-lg mb-1.5 font-poppins"
 						></vue-typer>
 						<Icons class="mt-1.5" />
 					</div>
@@ -19,12 +21,12 @@
 					<a class="absolute cursor-pointer bottom-5 scroll"></a>
 				</div>
 			</section>
-			<section class="grid w-full grid-cols-1 lg:grid-cols-2 h-1/2">
+			<section class="grid w-full grid-cols-1 xl:grid-cols-2 h-1/2">
 				<div class="w-11/12 px-5 py-1.5 space-y-9 lg:space-y-1 2xl:space-y-5">
 					<div class="mt-3">
-						<h5 class="text-xl font-semibold 2xl:text-3xl font-poppins">About me</h5>
+						<h5 class="text-xl font-semibold lg:text-2xl 2xl:text-3xl font-poppins">About me</h5>
 						<p
-							class="text-sm 2xl:text-xl w-full lg:w-5/6 pl-2.5 pr-1.5 font-roboto border-l-4 rounded-l-sm border-purple-700"
+							class="text-sm lg:text-lg 2xl:text-xl w-full xl:w-5/6 pl-2.5 pr-1.5 font-roboto border-l-4 rounded-l-sm border-purple-700"
 						>
 							I'm a 15-year-old back-end developer who wants to be a software
 							engineer in the future. I enjoy playing and making stuff with
@@ -46,14 +48,14 @@
 						</p>
 					</div>
 					<div>
-						<h5 class="text-xl font-semibold 2xl:text-3xl font-poppins">Positions</h5>
+						<h5 class="text-xl font-semibold lg:text-2xl 2xl:text-3xl font-poppins">Positions</h5>
 						<div
 							class="grid grid-flow-col grid-rows-2 gap-x-3 lg:gap-x-0 gap-y-1 lg:gap-y-3"
 						>
 							<div v-for="position in positions" :key="position.title">
 								<a
 									:href="position.url ? position.url : '#'"
-									:class="`block ${!position.url ? 'cursor-not-allowed ' : ''}2xl:text-xl pl-2.5 pr-1.5 border-l-4 rounded-l-sm border-lightBlue-400`"
+									:class="`block lg:text-lg ${!position.url ? 'cursor-not-allowed ' : ''}2xl:text-xl pl-2.5 pr-1.5 border-l-4 rounded-l-sm border-lightBlue-400`"
 								>
 									<span
 										class="font-semibold text-gray-800 font-poppins"
@@ -69,12 +71,12 @@
 					</div>
 				</div>
 				<div class="w-11/12 px-5 py-5 space-y-1.5">
-					<h5 class="text-xl font-semibold 2xl:text-3xl font-poppins">Projects</h5>
-					<div class="grid grid-rows-2 lg:grid-flow-col lg:gap-y-1.5 gap-y-3">
+					<h5 class="text-xl font-semibold lg:text-2xl 2xl:text-3xl font-poppins">Projects</h5>
+					<div class="grid md:grid-rows-2 lg:grid-flow-col lg:gap-y-1.5 gap-y-3">
 						<div v-for="project in projects" :key="project.title">
 							<a
 								:href="project.url"
-								class="block 2xl:text-xl pl-2.5 pr-1.5 border-l-4 rounded-l-sm border-red-500"
+								class="block lg:text-lg 2xl:text-xl pl-2.5 pr-1.5 border-l-4 rounded-l-sm border-red-500"
 							>
 								<span
 									class="font-semibold text-gray-800 font-poppins"
