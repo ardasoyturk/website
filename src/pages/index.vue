@@ -1,203 +1,108 @@
 <template>
-	<div class="w-full min-h-screen">
-		<div class="w-full h-screen">
-			<section
-				class="grid w-full h-full grid-cols-1 md:px-10 place-items-center place-content-center lg:h-1/2"
+	<div>
+		<div class="flex items-center justify-center w-full min-h-screen md:h-screen">
+			<div
+				class="flex flex-col-reverse justify-between rounded-full sm:flex-row"
 			>
-				<div class="-mt-5 lg:mt-10 space-y-1.5">
-					<Avatar class="w-40 mx-auto rounded-full 2xl:w-64" />
-					<div class="text-center">
-						<h1 class="2xl:text-4xl lg:text-3xl text-2xl text-[#12233c] font-poppins">Arda Soyturk</h1>
-						<vue-typer
-							:text="ranks"
-							:type-delay="60"
-    					:pre-erase-delay="2000"
-							class="2xl:text-2xl lg:text-xl text-lg mb-1.5 font-poppins"
-						></vue-typer>
-						<Icons class="mt-1.5" />
+				<div
+					class="self-center w-full text-4xl font-bold text-center font-poppins sm:w-3/5 sm:text-left"
+				>
+					<div class="leading-snug">Hello there! I'm Arda.</div>
+					<div class="leading-snug text-blue-500">
+						Welcome to my <a href="">website</a>.
 					</div>
 				</div>
-				<div class="flex items-center justify-center lg:hidden">
-					<a class="absolute cursor-pointer bottom-5 scroll"></a>
+				<div class="mb-8 sm:mt-0">
+					<Avatar
+						class="self-center w-48 ring-4 ring-[#12233c] mx-auto rounded-full md:rounded-[1rem] md:block"
+						draggable="false"
+					/>
 				</div>
-			</section>
-			<section class="grid w-full grid-cols-1 xl:grid-cols-2 h-1/2">
-				<div class="w-11/12 px-5 py-1.5 space-y-9 lg:space-y-1 2xl:space-y-5">
-					<div class="mt-3">
-						<h5 class="text-xl font-semibold lg:text-2xl 2xl:text-3xl font-poppins">About me</h5>
-						<p
-							class="text-sm lg:text-lg 2xl:text-xl w-full xl:w-5/6 pl-2.5 pr-1.5 font-roboto border-l-4 rounded-l-sm border-purple-700"
-						>
-							I'm a 15-year-old back-end developer who wants to be a software
-							engineer in the future. I enjoy playing and making stuff with
-							<a
-								href="https://nodejs.org"
-								rel="noreferrer"
-								target="_blank"
-								class="text-blue-800 hover:text-blue-900"
-								>Node.js</a
-							>. Recently I learned about
-							<a
-								href="https://vuejs.org"
-								rel="noreferrer"
-								target="_blank"
-								class="text-blue-800 hover:text-blue-900"
-								>Vue.js</a
-							>
-							and this is the first project I made with it.
-						</p>
-					</div>
-					<div>
-						<h5 class="text-xl font-semibold lg:text-2xl 2xl:text-3xl font-poppins">Positions</h5>
-						<div
-							class="grid grid-flow-col grid-rows-2 gap-x-3 lg:gap-x-0 gap-y-1 lg:gap-y-3"
-						>
-							<div v-for="position in positions" :key="position.title">
-								<a
-									:href="position.url ? position.url : '#'"
-									:class="`block lg:text-lg ${!position.url ? 'cursor-not-allowed ' : ''}2xl:text-xl pl-2.5 pr-1.5 border-l-4 rounded-l-sm border-lightBlue-400`"
-								>
-									<span
-										class="font-semibold text-gray-800 font-poppins"
-										:title="position.title"
-										>{{ position.title }}</span
-									>
-									<div class="text-sm 2xl:text-base font-roboto" :title="position.role">
-										{{ position.role }}
-									</div>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="w-11/12 px-5 py-5 space-y-1.5">
-					<h5 class="text-xl font-semibold lg:text-2xl 2xl:text-3xl font-poppins">Projects</h5>
-					<div class="grid md:grid-rows-2 lg:grid-flow-col lg:gap-y-1.5 gap-y-3">
-						<div v-for="project in projects" :key="project.title">
-							<a
-								:href="project.url"
-								class="block lg:text-lg 2xl:text-xl pl-2.5 pr-1.5 border-l-4 rounded-l-sm border-red-500"
-							>
-								<span
-									class="font-semibold text-gray-800 font-poppins"
-									:title="project.title"
-									>{{ project.title }}</span
-								>
-								<p
-									class="text-sm 2xl:text-base font-roboto"
-									v-html="project.description"
-								>
-									{{ project.description }}
-								</p>
-							</a>
-						</div>
-					</div>
-				</div>
-			</section>
+			</div>
+        <a
+          class="absolute cursor-pointer bottom-8 scroll"
+        ></a>
 		</div>
+    <div class="relative flex items-center justify-center w-full min-h-screen py-10">
+				<div class="flex items-center mx-auto justify-centerh-screen lg:grid">
+					<div class="space-y-5">
+            <about-me />
+						<div class="grid md:grid-cols-2 gap-y-5 md:gap-y-0 justify-items-center">
+              <positions />
+              <projects />
+						</div>
+						<div class="w-11/12 mx-auto space-y-2 md:w-1/2 md:block">
+							<h5 class="text-3xl font-medium tracking-tight text-center font-poppins">
+								My accounts on social media
+							</h5>
+							<Icons />
+						</div>
+					</div>
+				</div>
+        <div class="absolute bottom-0 w-full h-3 bg-[#12233c]"></div>
+    </div>
 	</div>
 </template>
 
 <script>
+import AboutMe from '../components/Homepage/AboutMe.vue';
+import Positions from '../components/Homepage/Positions.vue';
+import Projects from '../components/Homepage/Projects.vue';
+
+
 export default {
-	data() {
-		return {
-			ranks: [
-				"Gamer",
-				"Student",
-				"Turkish",
-				"Vue Lover",
-				"Programmer",
-				"Professional Javascript Player",
-				"Netflix Lover",
-				"Back-end Developer",
-				"Stack Overflow FTW!",
-				"Website Developer",
-				"Prefers Spotify to YT Music",
-			],
-			projects: [
-				{
-					title: "Bing Wallpaper",
-					description:
-						"A program that changes your desktop wallpaper with the Bing's image of the day.",
-					url: 'https://github.com/ardasoyturk/bing-wallpaper'
-				},
-				{
-					title: "Image Uploader",
-					description:
-						'A basic server boilerplate for auto-uploading images to cloud. Designed for <a href="https://getsharex.com">ShareX</a>-like programs.',
-					url: 'https://github.com/ardasoyturk/custom-image-uploader'
-				},
-				{
-					title: "Music Downloader",
-					description:
-						"A simple music downloader for YouTube based on youtube-dl. Built with Node.js",
-					url: 'https://github.com/ardasoyturk/music-downloader'
-				},
-				{
-					title: "My Personal Blog",
-					description:
-						"My personal <strong>Turkish</strong> blog that I write about my personal recommendations, opinions etc.",
-					url: '/blog'
-				},
-			],
-			positions: [
-				{
-					title: "Emoji Bot",
-					role: "Developer",
-					url: 'https://emojibot.xyz'
-				},
-				{
-					title: "Kahve Bot",
-					role: "Co-founder & Developer",
-					url: null
-				},
-				{
-					title: "PreMiD",
-					role: "Translator",
-					url: 'https://premid.app'
-				},
-				// {
-				// 	title: "Discord Templates",
-				// 	role: "Moderator",
-				// 	url: 'https://discordtemplates.com'
-				// },
-			],
-		};
-	},
+	components: { AboutMe, Positions, Projects },
+  data() {
+    return {
+
+    }
+  }
 };
 </script>
+
 
 <style>
 :root {
 	--scroll-color: #333;
-	@apply bg-gray-50;
 }
-
-.vue-typer .custom.char {
-	@apply text-amber-600;
-}
-
 .scroll {
 	width: 40px;
 	height: 40px;
-	border: 2px solid var(--scroll-color);
+	border: 3px solid var(--scroll-color);
 	border-radius: 50%;
 	animation: down 1.5s infinite;
 	-webkit-animation: down 1.5s infinite;
 	&::before {
 		content: "";
 		position: absolute;
-		top: 10px;
+		top: 8px;
 		left: 12px;
 		width: 12px;
 		height: 12px;
-		border-left: 2px solid var(--scroll-color);
-		border-bottom: 2px solid var(--scroll-color);
+		border-bottom: 3px solid var(--scroll-color);
+		border-left: 3px solid var(--scroll-color);
 		transform: rotate(-45deg);
 	}
 }
-
+.gotop {
+	width: 40px;
+	height: 40px;
+	border: 3px solid var(--scroll-color);
+	border-radius: 50%;
+	animation: up 1.5s infinite;
+	-webkit-animation: up 1.5s infinite;
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: 8px;
+		left: 12px;
+		width: 12px;
+		height: 12px;
+		border-right: 3px solid #333;
+		border-top: 3px solid #333;
+		transform: rotate(-45deg);
+	}
+}
 @keyframes down {
 	0% {
 		transform: translate(0);
@@ -209,7 +114,6 @@ export default {
 		transform: translate(0);
 	}
 }
-
 @-webkit-keyframes down {
 	0% {
 		transform: translate(0);
@@ -220,5 +124,30 @@ export default {
 	40% {
 		transform: translate(0);
 	}
+}
+@keyframes up {
+	0% {
+		transform: translate(0);
+	}
+	20% {
+		transform: translateY(-15px);
+	}
+	40% {
+		transform: translate(0);
+	}
+}
+@-webkit-keyframes up {
+	0% {
+		transform: translate(0);
+	}
+	20% {
+		transform: translateY(-15px);
+	}
+	40% {
+		transform: translate(0);
+	}
+}
+.section {
+	@apply w-screen h-screen;
 }
 </style>
