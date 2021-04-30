@@ -4,25 +4,47 @@
   </div>
 </template>
 
-<style>
-/* width */
+<style lang="scss">
+
+
 ::-webkit-scrollbar {
   width: 10px;
+  &-track {
+    background: #ccc;
+  }
+  &-thumb {
+    @apply bg-emerald-600;
+    &:hover {
+      @apply bg-emerald-500;
+    }
+  }
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-  /* background: #f1f1f1; */
-  background: transparent;
+.dark {
+  ::-webkit-scrollbar {
+    width: 10px;
+    &-track {
+      background: #182e50;
+    }
+    &-thumb {
+      @apply bg-emerald-600;
+      &:hover {
+        @apply bg-emerald-500;
+      }
+    }
+  }
 }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #12233c;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+/* ::-webkit-scrollbar-track, .dark {
   background: #182e50;
 }
+
+
+::-webkit-scrollbar-thumb, .dark {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover, .dark {
+  background: rgb(161, 161, 170);
+} */
 </style>

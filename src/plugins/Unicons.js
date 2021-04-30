@@ -7,7 +7,9 @@ import {
   uniGithub,
   uniEnvelope,
   uniBars,
-  uniMultiply
+  uniMultiply,
+  uniMoon,
+  uniSun
  } from 'vue-unicons/dist/icons'
 
 const spotifyIcon = {
@@ -24,6 +26,8 @@ Unicon.add([
   uniEnvelope,
   uniBars,
   uniMultiply,
+  uniMoon,
+  uniSun,
   spotifyIcon
 ])
 Vue.use(Unicon)
