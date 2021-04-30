@@ -3,7 +3,7 @@
     <div class="switcher" v-if="$colorMode.preference === 'light'">
       <unicon fill="#10b981" name="moon" width="28" height="28" icon-style="line"></unicon>
     </div>
-    <div class="switcher" v-else-if="$colorMode.preference === 'dark'">
+    <div class="switcher" v-else>
       <unicon fill="#10b981" name="sun" width="28" height="28" icon-style="line"></unicon>
     </div>
   </div>
