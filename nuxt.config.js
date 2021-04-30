@@ -10,7 +10,7 @@ export default {
 			{ charset: 'utf-8' },
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
 		],
-		link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+		link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
 	},
 
 	css: [],
@@ -31,11 +31,11 @@ export default {
 		{
 			src: '@/plugins/Typer',
 			mode: 'client',
-		}
+		},
 	],
 	tailwindcss: {
 		configPath: resolve('./tailwind.config.js'),
-		jit: true
+		jit: true,
 	},
 	pwa: {
 		manifest: {
@@ -48,7 +48,11 @@ export default {
 
 	components: [{ path: '~/components', global: true }],
 
-	buildModules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts'],
+	buildModules: [
+		'@nuxtjs/color-mode',
+		'@nuxtjs/tailwindcss',
+		'@nuxtjs/google-fonts',
+	],
 
 	modules: [
 		'@nuxtjs/axios',
@@ -57,20 +61,24 @@ export default {
 		'@nuxtjs/robots',
 		'@nuxt/content',
 		[
-      "nuxt-social-meta",
-      {
-        url: "https://arda.codes",
-        title: "Arda Soyturk",
-        /* site_name: "Arda Soyturk", */
-        description: "I'm Arda, 15-year-old student interested in programming.",
-        /* img: "Link to image in static folder", */
-        locale: "en_US",
-        twitter: "@soyturkarda_",
-        /* twitter_card: "summary_large_image", */
-        themeColor: "#12233c",
-      },
-    ],
+			'nuxt-social-meta',
+			{
+				url: 'https://arda.codes',
+				title: 'Arda Soyturk',
+				/* site_name: "Arda Soyturk", */
+				description: "I'm Arda, 15-year-old student interested in programming.",
+				/* img: "Link to image in static folder", */
+				locale: 'en_US',
+				twitter: '@soyturkarda_',
+				/* twitter_card: "summary_large_image", */
+				themeColor: '#12233c',
+			},
+		],
 	],
+
+	colorMode: {
+    classSuffix: ""
+  },
 
 	axios: {},
 
@@ -82,7 +90,7 @@ export default {
 			Inter: true,
 			Quicksand: true,
 		},
-		display: 'swap'
+		display: 'swap',
 	},
 
 	content: {
