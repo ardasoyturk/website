@@ -54,7 +54,6 @@ export default {
 		'@nuxtjs/axios',
 		'@nuxt/postcss8',
 		'@nuxtjs/pwa',
-		'@nuxtjs/sitemap',
 		'@nuxtjs/robots',
 		'@nuxt/content',
 		[
