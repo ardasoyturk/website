@@ -1,6 +1,6 @@
 <template>
 	<div class="w-11/12 mx-auto">
-		<h5 class="text-3xl font-medium tracking-tight font-poppins">Positions</h5>
+		<h5 class="text-3xl font-medium tracking-tight xl:text-2xl font-poppins">Positions</h5>
 		<div class="grid grid-flow-row grid-cols-2 mt-2 gap-x-10 gap-y-1">
 			<div v-for="position in positions" :key="position.title">
 				<a
