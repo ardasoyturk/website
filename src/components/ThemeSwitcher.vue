@@ -1,5 +1,5 @@
 <template>
-  <div @click="switchTheme" class="absolute z-10 flex items-center justify-center w-10 h-10 cursor-pointer dark:bg-blueGray-700 bg-blueGray-300 right-10 top-10">
+  <div @click="switchTheme" class="flex items-center justify-center w-10 h-10 cursor-pointer  dark:bg-blueGray-700 bg-blueGray-300 right-10 top-10">
     <div class="switcher" v-if="$colorMode.preference === 'light'">
       <unicon fill="#10b981" name="moon" width="28" height="28" icon-style="line"></unicon>
     </div>
