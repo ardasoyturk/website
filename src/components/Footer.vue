@@ -13,7 +13,7 @@
       </span>
     </div>
   </div>
-  <div class="w-full h-3 dark:hover:bg-emerald-500 dark:bg-emerald-500"></div>
+  <div class="w-full h-3 hover:bg-emerald-500 bg-emerald-600"></div>
 </footer>
 </template>
 
