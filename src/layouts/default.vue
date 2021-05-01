@@ -1,10 +1,34 @@
 <template>
   <div>
+    <Header />
     <Nuxt />
+    <Footer />
   </div>
 </template>
 
+<script>
+export default {
+  transition: {
+    name: 'page',
+    mode: 'out-in'
+  }
+}
+</script>
+
 <style lang="scss">
+html {
+  scroll-behavior: smooth;
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.25s;
+}
+
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
 
 
 ::-webkit-scrollbar {
