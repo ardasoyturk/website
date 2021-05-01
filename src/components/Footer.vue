@@ -2,7 +2,7 @@
   <footer class="text-gray-600 dark:text-gray-200">
   <div class="bg-gray-200 dark:bg-blueGray-800">
     <div class="container flex flex-col flex-wrap px-5 py-3 mx-auto sm:flex-row">
-      <p class="self-center text-sm text-center text-gray-500 dark:text-gray-200 sm:text-left">© {{ new Date().getFullYear() }} Arda Soyturk —
+      <p class="self-center text-sm text-center text-gray-500 dark:text-gray-200 sm:text-left">© {{ new Date().getFullYear() }} Arda Soyturk <br class="sm:hidden"> — <br class="sm:hidden">
         <span class="text-gray-600 dark:text-gray-400">This website's source code is on <a href="https://github.com/ardasoyturk/website" rel="noopener noreferrer" class="underline">GitHub</a>.</span> 
       </p>
       <span class="inline-flex items-center justify-center mt-2 space-x-0.5 sm:ml-auto sm:mt-0 sm:justify-start">
