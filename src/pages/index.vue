@@ -1,8 +1,6 @@
 <template>
 	<div class="bg-gray-50 dark:bg-blueGray-900">
-		<ThemeSwitcher />
 		<div class="relative flex items-center justify-center w-full min-h-screen md:h-screen">
-			<div class="absolute top-0 w-full h-3 hover:bg-emerald-500 bg-emerald-600"></div>
 			<div
 				class="flex flex-col-reverse justify-between rounded-full sm:flex-row"
 			>
@@ -33,7 +31,6 @@
 					</div>
 				</div>
     </div>
-		<Footer :links="links" />
 	</div>
 </template>
 
@@ -44,21 +41,6 @@ import Projects from '../components/Homepage/Projects.vue';
 
 
 export default {
-	components: { AboutMe, Positions, Projects },
-  data() {
-    return {
-			links: {
-        discord: 'https://discord.com/users/403225819222245377',
-        twitter: 'https://twitter.com/soyturkarda_',
-        github: 'https://github.com/ardasoyturk',
-        spotify: 'https://open.spotify.com/user/zsfhpjxcu5uvcwjnlt5k2vvt9',
-        telegram: 'https://t.me/ardasoyturk',
-        /* mail: 'mailto:' */
-      }
-    }
-  },
-	beforeMount() {
-		this.$colorMode.preference = 'dark';
-	}
+	components: { AboutMe, Positions, Projects }
 };
 </script>

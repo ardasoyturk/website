@@ -19,6 +19,17 @@
 
 <script>
 export default {
-  props: ['links']
+  data() {
+    return {
+      links: {
+        discord: 'https://discord.com/users/403225819222245377',
+        twitter: 'https://twitter.com/soyturkarda_',
+        github: 'https://github.com/ardasoyturk',
+        spotify: 'https://open.spotify.com/user/zsfhpjxcu5uvcwjnlt5k2vvt9',
+        telegram: 'https://t.me/ardasoyturk',
+        /* mail: 'mailto:' */
+      }
+    }
+  }
 }
 </script>
