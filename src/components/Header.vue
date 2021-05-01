@@ -13,10 +13,10 @@
 			<nav
 				class="flex-wrap items-center justify-center hidden text-base sm:flex md:ml-auto md:mr-auto"
 			>
-				<nuxt-link :to="{ path: '/' }" class="mr-5 hover:text-gray-900">Homepage</nuxt-link>
-				<nuxt-link :to="{ path: '/blog' }" class="mr-5 hover:text-gray-900">Blog</nuxt-link>
-				<nuxt-link :to="{ path: '/', hash: '#projects' }" class="mr-5 hover:text-gray-900">Projects</nuxt-link>
-				<nuxt-link :to="{ path: '/', hash:'#positions'}" class="mr-5 hover:text-gray-900">Positions</nuxt-link>
+				<nuxt-link :to="{ path: '/' }" class="mr-5 hover:text-gray-900 dark:hover:text-gray-600">Homepage</nuxt-link>
+				<nuxt-link :to="{ path: '/blog' }" class="mr-5 hover:text-gray-900 dark:hover:text-gray-600">Blog</nuxt-link>
+				<nuxt-link :to="{ path: '/', hash: '#projects' }" class="mr-5 hover:text-gray-900 dark:hover:text-gray-600">Projects</nuxt-link>
+				<nuxt-link :to="{ path: '/', hash:'#positions'}" class="mr-5 hover:text-gray-900 dark:hover:text-gray-600">Positions</nuxt-link>
 			</nav>
 			<ThemeSwitcher
 				class="rounded focus:outline-none"
