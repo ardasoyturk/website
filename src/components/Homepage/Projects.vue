@@ -1,11 +1,12 @@
 <template>
-	<div class="w-11/12 mx-auto dark:text-gray-300">
+	<div id="projects" class="w-11/12 mx-auto dark:text-gray-300">
 		<h5 class="text-3xl font-medium tracking-tight xl:text-2xl font-poppins">Projects</h5>
 		<div
 			class="grid w-5/6 grid-flow-row grid-cols-2 mt-2 gap-x-5 md:gap-x-0 gap-y-1"
 		>
 			<div v-for="project in projects" :key="project.title">
-				<a
+				<smart-link
+					:blank="!project.url.startsWith('/')"
 					:href="project.url"
 					class="block pl-2.5 pr-1.5 border-l-4 rounded-l-sm border-red-500"
 				>
@@ -17,7 +18,7 @@
 					<p class="font-roboto" v-html="project.description">
 						{{ project.description }}
 					</p>
-				</a>
+				</smart-link>
 			</div>
 		</div>
 	</div>
