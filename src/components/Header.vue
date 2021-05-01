@@ -7,16 +7,16 @@
 			<a
 				class="flex items-center font-medium text-gray-900 dark:text-gray-400 md:mb-0"
 			>
-				<Avatar class="rounded-full ring-2 ring-gray-200" />
+				<img src="/favicon.png" width="48" height="48" class="rounded-[10px] ring-2 ring-gray-400 dark:ring-gray-200" />
 				<span class="ml-3 text-xl">Arda.codes</span>
 			</a>
 			<nav
 				class="flex-wrap items-center justify-center hidden text-base sm:flex md:ml-auto md:mr-auto"
 			>
-				<nuxt-link :to="{ path: '/' }" class="mr-5 hover:text-gray-900 dark:hover:text-gray-600">Homepage</nuxt-link>
-				<nuxt-link :to="{ path: '/blog' }" class="mr-5 hover:text-gray-900 dark:hover:text-gray-600">Blog</nuxt-link>
-				<nuxt-link :to="{ path: '/', hash: '#projects' }" class="mr-5 hover:text-gray-900 dark:hover:text-gray-600">Projects</nuxt-link>
-				<nuxt-link :to="{ path: '/', hash:'#positions'}" class="mr-5 hover:text-gray-900 dark:hover:text-gray-600">Positions</nuxt-link>
+				<nuxt-link :to="{ path: '/' }" class="mr-5 hover:text-gray-900 dark:hover:text-gray-500">Homepage</nuxt-link>
+				<nuxt-link :to="{ path: '/blog' }" class="mr-5 hover:text-gray-900 dark:hover:text-gray-500">Blog</nuxt-link>
+				<nuxt-link :to="{ path: '/', hash: '#projects' }" class="mr-5 hover:text-gray-900 dark:hover:text-gray-500">Projects</nuxt-link>
+				<nuxt-link :to="{ path: '/', hash:'#positions'}" class="mr-5 hover:text-gray-900 dark:hover:text-gray-500">Positions</nuxt-link>
 			</nav>
 			<ThemeSwitcher
 				class="rounded focus:outline-none"
