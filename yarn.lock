@@ -973,6 +973,13 @@
     methods "^1.1.2"
     path-to-regexp "^6.1.0"
 
+"@lihbr/utils-nuxt.smart-link@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@lihbr/utils-nuxt.smart-link/-/utils-nuxt.smart-link-0.2.2.tgz#068cc9ee86f9a690032e6983114cd259dd81bceb"
+  integrity sha512-XwtBxDYpilxZ2OxfmJY1165C+DF8jUn07aoxjnLJA+SleBV7UT0TmmvBkadcXPqcMUoAR8RbYAGszgKrRYrxdQ==
+  dependencies:
+    vue-functional-data-merge "^3.1.0"
+
 "@lokidb/full-text-search@^2.1.0":
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/@lokidb/full-text-search/-/full-text-search-2.1.0.tgz#5f0b36dc0d67ba365f84663a9c0438537c186a76"
@@ -10546,6 +10553,11 @@ vue-client-only@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/vue-client-only/-/vue-client-only-2.0.0.tgz#ddad8d675ee02c761a14229f0e440e219de1da1c"
   integrity sha512-arhk1wtWAfLsJyxGMoEYhoBowM87/i6HLSG2LH/03Yog6i2d9JEN1peMP0Ceis+/n9DxdenGYZZTxbPPJyHciA==
+
+vue-functional-data-merge@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/vue-functional-data-merge/-/vue-functional-data-merge-3.1.0.tgz#08a7797583b7f35680587f8a1d51d729aa1dc657"
+  integrity sha512-leT4kdJVQyeZNY1kmnS1xiUlQ9z1B/kdBFCILIjYYQDqZgLqCLa0UhjSSeRX6c3mUe6U5qYeM8LrEqkHJ1B4LA==
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"

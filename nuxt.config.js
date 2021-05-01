@@ -32,6 +32,10 @@ export default {
 			src: '@/plugins/Typer',
 			mode: 'client',
 		},
+		{
+			src: '@/plugins/SmartLink',
+			mode: 'client',
+		},
 	],
 	tailwindcss: {
 		configPath: resolve('./tailwind.config.js'),
