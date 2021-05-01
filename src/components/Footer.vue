@@ -6,10 +6,11 @@
         <span class="text-gray-600 dark:text-gray-400">This website's source code is on <a href="https://github.com/ardasoyturk/website" rel="noopener noreferrer" class="underline">GitHub</a>.</span> 
       </p>
       <span class="inline-flex items-center justify-center mt-2 space-x-0.5 sm:ml-auto sm:mt-0 sm:justify-start">
-      <a :href="this.links.discord"><unicon name="discord" fill="currentColor" width="24" height="24" icon-style="monochrome"></unicon></a>
-		  <a :href="this.links.twitter"><unicon name="twitter" fill="currentColor" width="24" height="24" icon-style="line"></unicon></a>
-		  <a :href="this.links.github"><unicon name="github" fill="currentColor" width="24" height="24" icon-style="line"></unicon></a>
-		  <a :href="this.links.spotify"><unicon name="spotify" fill="currentColor" width="21" height="21" icon-style="line"></unicon></a>
+        <div v-for="icon in icons" :key="icon.name">
+          <a :aria-label="icon.name" :href="icon.link" target="_blank" rel="noopener noreferrer">
+            <unicon fill="currentColor" :name="icon.name.toLowerCase()" :width="icon.name === 'Spotify' ? 24 : 21" :height="icon.name === 'spotify' ? 24 : 21" :icon-style="icon.style"></unicon>
+          </a>
+        </div>
       </span>
     </div>
   </div>
@@ -21,14 +22,29 @@
 export default {
   data() {
     return {
-      links: {
-        discord: 'https://discord.com/users/403225819222245377',
-        twitter: 'https://twitter.com/soyturkarda_',
-        github: 'https://github.com/ardasoyturk',
-        spotify: 'https://open.spotify.com/user/zsfhpjxcu5uvcwjnlt5k2vvt9',
-        telegram: 'https://t.me/ardasoyturk',
+      icons: [
+        {
+          name: 'Discord',
+          link: 'https://discord.com/users/403225819222245377',
+          style: 'monochrome'
+        },
+        {
+          name: 'Twitter',
+          link: 'https://twitter.com/soyturkarda_',
+          style: 'line'
+        },
+        {
+          name: 'GitHub',
+          link: 'https://github.com/ardasoyturk',
+          style: 'line'
+        },
+        {
+          name: 'Spotify',
+          link: 'https://open.spotify.com/user/zsfhpjxcu5uvcwjnlt5k2vvt9',
+          style: 'line'
+        }
         /* mail: 'mailto:' */
-      }
+      ]
     }
   }
 }

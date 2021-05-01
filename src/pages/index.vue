@@ -9,7 +9,7 @@
 				>
 					<div class="leading-snug dark:text-gray-50">Hello there! I'm Arda.</div>
 					<div class="leading-snug text-blue-500">
-						Welcome to my <a href="">website</a>.
+						Welcome to my website.
 					</div>
 				</div>
 				<div class="mb-8 sm:mt-0">

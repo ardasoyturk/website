@@ -4,12 +4,12 @@
 		<div
 			class="container flex flex-row flex-wrap items-center justify-between w-11/12 px-2 py-5 mx-auto sm:w-full sm:space-x-0 sm:px-5"
 		>
-			<a
-				class="flex items-center font-medium text-gray-900 dark:text-gray-400 md:mb-0"
+			<span
+				class="flex items-center font-medium text-gray-900 cursor-pointer dark:text-gray-400 md:mb-0"
 			>
-				<img src="/favicon.png" width="48" height="48" class="rounded-[10px] ring-2 ring-gray-400 dark:ring-gray-200" />
+				<img src="/favicon.png" alt="Favicon" width="48" height="48" class="rounded-[10px] ring-2 ring-gray-400 dark:ring-gray-200" />
 				<span class="ml-3 text-xl">Arda.codes</span>
-			</a>
+			</span>
 			<nav
 				class="flex-wrap items-center justify-center hidden text-base sm:flex md:ml-auto md:mr-auto"
 			>
