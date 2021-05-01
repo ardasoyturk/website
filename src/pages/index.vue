@@ -1,5 +1,5 @@
 <template>
-	<div class="bg-gray-50 dark:bg-blueGray-900">
+	<div>
 		<div class="relative flex items-center justify-center w-full min-h-screen md:h-screen">
 			<div
 				class="flex flex-col-reverse justify-between rounded-full sm:flex-row"
