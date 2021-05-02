@@ -3,12 +3,12 @@
 <div class="container w-full h-full mx-auto">
   <div class="relative h-full p-10 overflow-hidden">
   <h1 class="pb-3 text-2xl text-center font-poppins dark:text-white">My Journey</h1>
-    <div class="absolute h-full border border-gray-700 dark:border-blueGray-600 border-2-2 border-opacity-70 left-14 sm:left-1/2"></div>
+    <div class="absolute h-full border border-gray-600 dark:border-blueGray-600 border-2-2 border-opacity-70 left-14 sm:left-1/2"></div>
     <div v-for="(item, index) in items" :key="item.title">
       <div :class="`flex ${!(index % 2) ? 'sm:flex-row-reverse ' : ''}items-center justify-between w-full mb-8 right-timeline`">
-        <div class="order-1 w-5/12"></div>
-        <div class="sm:static absolute z-20 flex items-center order-1 bg-gray-800 rounded-full shadow-xl left-[42px] w-7 h-7 dark:bg-blueGray-700"></div>
-        <div class="order-1 w-full px-6 py-4 space-y-1 bg-gray-400 rounded-lg shadow-xl sm:w-5/12 dark:bg-blueGray-800">
+        <div class="order-1 w-1/4 sm:w-5/12"></div>
+        <div class="sm:static absolute z-20 flex items-center order-1 bg-gray-600 rounded-full shadow-xl left-[45px] w-6 h-6 dark:bg-blueGray-700"></div>
+        <div class="order-1 w-full px-6 py-4 space-y-1 bg-gray-300 rounded-lg shadow-xl sm:w-5/12 dark:bg-blueGray-800">
           <h3 class="text-xl text-gray-800 dark:text-gray-100 font-poppins">{{ item.title }}</h3>
           <p class="text-sm leading-snug tracking-wide text-gray-900 dark:text-gray-200">{{ item.desc }}</p>
           <div class="flex justify-end w-full py-1 space-x-1 text-sm text-blue-600">
