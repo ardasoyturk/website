@@ -28,6 +28,7 @@
               <positions />
               <projects />
 						</div>
+						<journey />
 					</div>
 				</div>
     </div>
@@ -35,12 +36,13 @@
 </template>
 
 <script>
-import AboutMe from '../components/Homepage/AboutMe.vue';
-import Positions from '../components/Homepage/Positions.vue';
-import Projects from '../components/Homepage/Projects.vue';
+import AboutMe from '~/components/Homepage/AboutMe.vue';
+import Positions from '~/components/Homepage/Positions.vue';
+import Projects from '~/components/Homepage/Projects.vue';
+import Journey from "~/components/Homepage/Journey.vue";
 
 
 export default {
-	components: { AboutMe, Positions, Projects }
+	components: { AboutMe, Positions, Projects, Journey }
 };
 </script>
