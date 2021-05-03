@@ -11,8 +11,9 @@
 					<div class="leading-snug text-blue-500">
 						Welcome to my website.
 					</div>
+					<lanyard class="py-1" />
 				</div>
-				<div class="mb-8 sm:mt-0">
+				<div class="mb-8 sm:mb-0">
 					<Avatar
 						class="self-center w-48 ring-4 dark:ring-gray-100 ring-[#12233c] mx-auto rounded-full md:rounded-[1rem] md:block"
 						draggable="false"
@@ -40,9 +41,9 @@ import AboutMe from '~/components/Homepage/AboutMe.vue';
 import Positions from '~/components/Homepage/Positions.vue';
 import Projects from '~/components/Homepage/Projects.vue';
 import Journey from "~/components/Homepage/Journey.vue";
-
+import Lanyard from "~/components/Homepage/Lanyard.vue";
 
 export default {
-	components: { AboutMe, Positions, Projects, Journey }
+	components: { AboutMe, Positions, Projects, Journey, Lanyard },
 };
 </script>
