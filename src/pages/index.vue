@@ -5,7 +5,7 @@
 				class="flex flex-col-reverse justify-between rounded-full sm:flex-row"
 			>
 				<div
-					class="self-center w-full text-4xl font-bold text-center font-poppins sm:w-3/5 sm:text-left"
+					class="self-center w-full text-3xl font-bold text-center sm:text-4xl font-poppins sm:w-3/5 sm:text-left"
 				>
 					<div class="leading-snug dark:text-gray-50">Hello there! I'm Arda.</div>
 					<div class="leading-snug text-blue-500">
@@ -13,7 +13,7 @@
 					</div>
 					<lanyard class="py-1" />
 				</div>
-				<div class="mb-8 sm:mb-0">
+				<div class="mb-4 sm:mb-0">
 					<Avatar
 						class="self-center w-48 ring-4 dark:ring-gray-100 ring-[#12233c] mx-auto rounded-full md:rounded-[1rem] md:block"
 						draggable="false"

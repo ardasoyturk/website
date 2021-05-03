@@ -1,6 +1,6 @@
 <template>
 	<div
-		class="flex space-x-1.5 text-sm font-light dark:text-gray-50"
+		class="flex w-11/12 mx-auto space-x-1 text-base font-light sm:w-full sm:mx-0 sm:text-sm dark:text-gray-50"
 		v-if="lanyard.listening_to_spotify"
 	>
 		<unicon
