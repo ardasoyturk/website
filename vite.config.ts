@@ -11,6 +11,7 @@ import ViteFonts from 'vite-plugin-fonts';
 
 // Define config
 export default defineConfig({
+	base: './',
 	plugins: [
 		Vue(),
 		WindiCSS(),
