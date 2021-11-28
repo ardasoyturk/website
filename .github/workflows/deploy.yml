@@ -18,12 +18,15 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - uses: pnpm/action-setup@v2.0.1
+      with:
+       version: 6.15.0
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: rm -rf node_modules && pnpm install --frozen-lockfile
+        cache: 'pnpm'
+    - run: pnpm install
     - run: pnpm run build
     
     - name: Deploy 🚀
