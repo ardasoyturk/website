@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: ardasoyturk.github.io
+Token: 6dcc356b500414d7719b76a30f53cd50b618c600fb94cb075aa72ff997abb54c
