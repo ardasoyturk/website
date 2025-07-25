@@ -21,6 +21,7 @@
     "tailwindcss": "^4.1.11"
   },
   "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.10.1",
     "@eslint/js": "^9.30.1",
     "@iconify-json/simple-icons": "^1.2.44",
     "@iconify/react": "^6.0.0",
@@ -35,6 +36,7 @@
     "tw-animate-css": "^1.3.6",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.35.1",
-    "vite": "^7.0.4"
+    "vite": "^7.0.4",
+    "wrangler": "^4.26.0"
   }
 }
