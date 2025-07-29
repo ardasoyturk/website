@@ -1,5 +1,6 @@
 "use client";
 
+import { Icon } from "@iconify/react";
 // Uncomment these imports when re-enabling the projects section
 /*
 import {
@@ -20,8 +21,6 @@ import {
 	// Music,
 	// Eye,
 } from "lucide-react";
-
-import { Icon } from "@iconify/react";
 
 export default function PersonalWebsite() {
 	// Social media links - easily editable
@@ -74,62 +73,39 @@ export default function PersonalWebsite() {
 	*/
 
 	return (
-		<div className="min-h-screen flex items-center justify-center bg-background text-foreground p-4 sm:p-6 md:p-8 lg:p-12 transition-colors duration-300">
-			<div className="w-full max-w-2xl flex justify-center">
+		<div className="flex min-h-screen items-center justify-center bg-background p-4 text-foreground transition-colors duration-300 sm:p-6 md:p-8 lg:p-12">
+			<div className="flex w-full max-w-2xl justify-center">
 				{/* Centered Profile Section */}
-				<div className="flex flex-col justify-center items-center text-center">
-				<div className="w-24 h-24 rounded-full flex items-center justify-center text-4xl font-bold mb-6 shadow-lg transition-colors duration-300" style={{ background: 'var(--profile-bg)' }}>
+				<div className="flex flex-col items-center justify-center text-center">
+					<div
+						className="mb-6 flex h-24 w-24 items-center justify-center rounded-full font-bold text-4xl shadow-lg transition-colors duration-300"
+						style={{ background: "var(--profile-bg)" }}
+					>
 						AS
 					</div>
-				<h1 className="text-4xl md:text-5xl font-extrabold mb-3 leading-tight transition-colors duration-300">
+					<h1 className="mb-3 font-extrabold text-4xl leading-tight transition-colors duration-300 md:text-5xl">
 						Arda Soyturk
 					</h1>
-				<p className="text-xl mb-6 transition-colors duration-300">
-						Computer Engineering Student
-					</p>
-				<p className="leading-relaxed mb-8 max-w-md transition-colors duration-300">
-						I'm a passionate computer engineering student with a
-						strong foundation in Node.js and modern web
-						technologies. I enjoy building creative solutions,
-						exploring new frameworks, and continuously expanding my
+					<p className="mb-6 text-xl transition-colors duration-300">Computer Engineering Student</p>
+					<p className="mb-8 max-w-md leading-relaxed transition-colors duration-300">
+						I'm a passionate computer engineering student with a strong foundation in Node.js and modern web
+						technologies. I enjoy building creative solutions, exploring new frameworks, and continuously expanding my
 						skill set.
 					</p>
-				<div className="flex space-x-6 mb-8">
-					<a
-						href={socialLinks.twitter}
-						className="transition-colors"
-						aria-label="Twitter"
-					>
-						<Icon icon="simple-icons:x" className="w-6 h-6" />
-					</a>
-					<a
-						href={socialLinks.github}
-						className="transition-colors"
-						aria-label="GitHub"
-					>
-						<Icon
-							icon="simple-icons:github"
-							className="w-6 h-6"
-						/>
-					</a>
-					<a
-						href={socialLinks.linkedin}
-						className="transition-colors"
-						aria-label="LinkedIn"
-					>
-						<Icon
-							icon="simple-icons:linkedin"
-							className="w-6 h-6"
-						/>
-					</a>
-					<a
-						href={`mailto:${socialLinks.email}`}
-						className="transition-colors"
-						aria-label="Email"
-					>
-						<Mail className="w-6 h-6" />
-					</a>
-				</div>
+					<div className="mb-8 flex space-x-6">
+						<a href={socialLinks.twitter} className="transition-colors" aria-label="Twitter">
+							<Icon icon="simple-icons:x" className="h-6 w-6" />
+						</a>
+						<a href={socialLinks.github} className="transition-colors" aria-label="GitHub">
+							<Icon icon="simple-icons:github" className="h-6 w-6" />
+						</a>
+						<a href={socialLinks.linkedin} className="transition-colors" aria-label="LinkedIn">
+							<Icon icon="simple-icons:linkedin" className="h-6 w-6" />
+						</a>
+						<a href={`mailto:${socialLinks.email}`} className="transition-colors" aria-label="Email">
+							<Mail className="h-6 w-6" />
+						</a>
+					</div>
 					{/* <Button className="bg-zinc-700 hover:bg-zinc-600 text-white px-6 py-2 text-sm border border-zinc-600">
 						<Download className="w-4 h-4 mr-2" />
 						Download Resume
