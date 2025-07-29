@@ -74,62 +74,62 @@ export default function PersonalWebsite() {
 	*/
 
 	return (
-		<div className="min-h-screen flex items-center justify-center bg-zinc-900 text-white p-4 sm:p-6 md:p-8 lg:p-12">
+		<div className="min-h-screen flex items-center justify-center bg-background text-foreground p-4 sm:p-6 md:p-8 lg:p-12 transition-colors duration-300">
 			<div className="w-full max-w-2xl flex justify-center">
 				{/* Centered Profile Section */}
 				<div className="flex flex-col justify-center items-center text-center">
-					<div className="w-24 h-24 bg-zinc-700 rounded-full flex items-center justify-center text-4xl font-bold mb-6 shadow-lg">
+				<div className="w-24 h-24 rounded-full flex items-center justify-center text-4xl font-bold mb-6 shadow-lg transition-colors duration-300" style={{ background: 'var(--profile-bg)' }}>
 						AS
 					</div>
-					<h1 className="text-4xl md:text-5xl font-extrabold mb-3 text-white leading-tight">
+				<h1 className="text-4xl md:text-5xl font-extrabold mb-3 leading-tight transition-colors duration-300">
 						Arda Soyturk
 					</h1>
-					<p className="text-xl text-zinc-300 mb-6">
+				<p className="text-xl mb-6 transition-colors duration-300">
 						Computer Engineering Student
 					</p>
-					<p className="text-zinc-400 leading-relaxed mb-8 max-w-md">
+				<p className="leading-relaxed mb-8 max-w-md transition-colors duration-300">
 						I'm a passionate computer engineering student with a
 						strong foundation in Node.js and modern web
 						technologies. I enjoy building creative solutions,
 						exploring new frameworks, and continuously expanding my
 						skill set.
 					</p>
-					<div className="flex space-x-6 mb-8">
-						<a
-							href={socialLinks.twitter}
-							className="text-zinc-400 hover:text-zinc-200 transition-colors"
-							aria-label="Twitter"
-						>
-							<Icon icon="simple-icons:x" className="w-6 h-6" />
-						</a>
-						<a
-							href={socialLinks.github}
-							className="text-zinc-400 hover:text-zinc-200 transition-colors"
-							aria-label="GitHub"
-						>
-							<Icon
-								icon="simple-icons:github"
-								className="w-6 h-6"
-							/>
-						</a>
-						<a
-							href={socialLinks.linkedin}
-							className="text-zinc-400 hover:text-zinc-200 transition-colors"
-							aria-label="LinkedIn"
-						>
-							<Icon
-								icon="simple-icons:linkedin"
-								className="w-6 h-6"
-							/>
-						</a>
-						<a
-							href={`mailto:${socialLinks.email}`}
-							className="text-zinc-400 hover:text-zinc-200 transition-colors"
-							aria-label="Email"
-						>
-							<Mail className="w-6 h-6" />
-						</a>
-					</div>
+				<div className="flex space-x-6 mb-8">
+					<a
+						href={socialLinks.twitter}
+						className="transition-colors"
+						aria-label="Twitter"
+					>
+						<Icon icon="simple-icons:x" className="w-6 h-6" />
+					</a>
+					<a
+						href={socialLinks.github}
+						className="transition-colors"
+						aria-label="GitHub"
+					>
+						<Icon
+							icon="simple-icons:github"
+							className="w-6 h-6"
+						/>
+					</a>
+					<a
+						href={socialLinks.linkedin}
+						className="transition-colors"
+						aria-label="LinkedIn"
+					>
+						<Icon
+							icon="simple-icons:linkedin"
+							className="w-6 h-6"
+						/>
+					</a>
+					<a
+						href={`mailto:${socialLinks.email}`}
+						className="transition-colors"
+						aria-label="Email"
+					>
+						<Mail className="w-6 h-6" />
+					</a>
+				</div>
 					{/* <Button className="bg-zinc-700 hover:bg-zinc-600 text-white px-6 py-2 text-sm border border-zinc-600">
 						<Download className="w-4 h-4 mr-2" />
 						Download Resume
