@@ -1,15 +1,17 @@
 # Personal Website
 
-A clean and minimalist personal website built with React, TypeScript, and Vite.
+A clean and minimalist personal website built with Astro, React, and TypeScript.
 
 ## 🚀 Tech Stack
 
 - **React** - UI library
 - **TypeScript** - Type safety
-- **Vite** - Build tool and dev server
+- **Astro** - Web framework and build system
 - **Tailwind CSS** - Styling
 - **Iconify** - Icons (Simple Icons for brand icons)
 - **Lucide React** - UI icons
+- **Astro Content + MDX** - Blog content support
+- **Oxlint + Oxfmt** - Linting and formatting
 
 ## 🛠️ Development
 
@@ -50,19 +52,21 @@ src/
 ## 🎨 Customization
 
 ### Social Links
-Update the `socialLinks` object in `App.tsx`:
+
+Update the `socialLinks` object in `src/App.tsx`:
 
 ```typescript
 const socialLinks = {
   twitter: "your-twitter-url",
-  github: "your-github-url", 
+  github: "your-github-url",
   linkedin: "your-linkedin-url",
   email: "your-email@example.com",
 };
 ```
 
 ### Adding Projects
-Uncomment the projects section in `App.tsx` and the related imports to display your projects.
+
+Uncomment the projects section in `src/App.tsx` and the related imports to display your projects.
 
 ## 📄 License
 

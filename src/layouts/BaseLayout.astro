@@ -1,0 +1,73 @@
+---
+import "@/index.css";
+
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const {
+	title = "Arda Soyturk",
+	description = "Personal website of Arda Soyturk",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content={description} />
+		<script is:inline>
+			(() => {
+				const storageKey = "website-theme";
+				const storedTheme = localStorage.getItem(storageKey);
+				const fallbackTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+					? "basic-dark"
+					: "basic-light";
+				document.documentElement.dataset.theme = storedTheme || fallbackTheme;
+			})();
+		</script>
+		<title>{title}</title>
+	</head>
+	<body>
+		<div class="theme-switcher" aria-label="Theme switcher">
+			<span class="theme-switcher__label">Theme</span>
+			<div class="theme-switcher__list" id="theme-switcher-list">
+				<button type="button" class="theme-dot" data-theme="basic-light" aria-label="Basic Light" title="Basic Light" style="background: linear-gradient(135deg, #f9fbff, #c8d8ff);"></button>
+				<button type="button" class="theme-dot" data-theme="basic-dark" aria-label="Basic Dark" title="Basic Dark" style="background: linear-gradient(135deg, #0f1424, #33456f);"></button>
+				<button type="button" class="theme-dot" data-theme="catppuccin-light" aria-label="Catppuccin Light" title="Catppuccin Light" style="background: linear-gradient(135deg, #eff1f5, #b4befe);"></button>
+				<button type="button" class="theme-dot" data-theme="catppuccin-dark" aria-label="Catppuccin Dark" title="Catppuccin Dark" style="background: linear-gradient(135deg, #1e1e2e, #89b4fa);"></button>
+				<button type="button" class="theme-dot" data-theme="sepia" aria-label="Sepia" title="Sepia" style="background: linear-gradient(135deg, #f5ecd8, #c89d67);"></button>
+			</div>
+		</div>
+		<slot />
+		<script is:inline>
+			(() => {
+				const storageKey = "website-theme";
+				const list = document.getElementById("theme-switcher-list");
+				if (!list) return;
+
+				const buttons = Array.from(list.querySelectorAll("button[data-theme]"));
+				const applyPressedState = (currentTheme) => {
+					buttons.forEach((button) => {
+						button.setAttribute("aria-pressed", String(button.dataset.theme === currentTheme));
+					});
+				};
+
+				const initialTheme = document.documentElement.dataset.theme || "basic-dark";
+				applyPressedState(initialTheme);
+
+				buttons.forEach((button) => {
+					button.addEventListener("click", () => {
+						const nextTheme = button.dataset.theme;
+						if (!nextTheme) return;
+						document.documentElement.dataset.theme = nextTheme;
+						localStorage.setItem(storageKey, nextTheme);
+						applyPressedState(nextTheme);
+					});
+				});
+			})();
+		</script>
+	</body>
+</html>

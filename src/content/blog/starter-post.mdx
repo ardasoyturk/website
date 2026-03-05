@@ -1,0 +1,107 @@
+---
+title: "Astro + MDX Playground: Everything At Once"
+description: "A showcase post to stress-test typography, spacing, code blocks, lists, tables, and mixed Markdown patterns."
+publishDate: 2026-03-05
+updatedDate: 2026-03-05
+tags:
+  - astro
+  - mdx
+  - design
+---
+
+Welcome. This is a deliberately overloaded starter post so we can inspect how the blog theme behaves under pressure.
+
+---
+
+## 1. Fast Context
+
+I wanted one file that includes:
+
+- Long paragraphs for rhythm and line length testing
+- Dense lists with nested bullets
+- Tables, quotes, and callout blocks
+- Code fences with different languages
+- Details/summary blocks and inline HTML
+
+If this page looks clean, most future posts will look clean.
+
+> Good writing needs good defaults. Great defaults make writing feel effortless.
+
+## 2. Mixed Content Test
+
+### Short paragraph
+
+Modern personal blogs should feel readable at `08:00` on mobile and `23:30` on desktop. Same content, different context.
+
+### Long paragraph
+
+There is a specific kind of calm that comes from a page where every layer is intentional: typography that breathes, contrast that does not fight your eyes, spacing that creates momentum, and components that disappear into the writing instead of shouting over it. This post exists to verify exactly that.
+
+### Task list
+
+- [x] Use Astro content collections
+- [x] Support MDX files
+- [x] Generate clean slugs
+- [x] Keep styling simple
+- [ ] Publish a real essay
+
+## 3. Code Blocks
+
+```ts
+type ThemeToken = {
+  name: string;
+  value: string;
+  purpose: "text" | "surface" | "accent";
+};
+
+export const tokens: ThemeToken[] = [
+  { name: "foreground", value: "oklch(0.24 0.01 252)", purpose: "text" },
+  { name: "background", value: "oklch(0.99 0.005 252)", purpose: "surface" },
+  { name: "accent", value: "oklch(0.37 0.07 246)", purpose: "accent" },
+];
+```
+
+```bash
+bun run check
+bun run build
+```
+
+```css
+.blog-post blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
+  color: var(--muted-foreground);
+}
+```
+
+## 4. Table
+
+| Layer      | Goal        | Rule                            |
+| ---------- | ----------- | ------------------------------- |
+| Typography | Readability | Keep line-length around 65-75ch |
+| Color      | Comfort     | Strong contrast, soft surfaces  |
+| Motion     | Clarity     | Subtle only, no visual noise    |
+| Components | Focus       | Style content, not chrome       |
+
+## 5. Collapsible Section
+
+<details>
+  <summary>Open for a tiny opinionated checklist</summary>
+  <ul>
+    <li>Put a date on every post.</li>
+    <li>Keep introductions short.</li>
+    <li>End with one useful takeaway.</li>
+    <li>Avoid screenshots of code when code fences exist.</li>
+  </ul>
+</details>
+
+## 6. Numbered Sequence
+
+1. Draft quickly.
+2. Edit slowly.
+3. Cut 20%.
+4. Publish.
+
+## 7. Tiny Outro
+
+If the page still feels tidy after all this, your blog styling is in a healthy place.
