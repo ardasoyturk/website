@@ -12,6 +12,7 @@
     "format:write": "oxfmt --write ."
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^12.6.12",
     "@astrojs/mdx": "^4.3.13",
     "@astrojs/react": "^4.4.2",
     "@fontsource/ibm-plex-sans": "^5.2.8",

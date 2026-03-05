@@ -1,5 +1,9 @@
 {
   "name": "website",
   "compatibility_date": "2026-03-05",
-  "pages_build_output_dir": "./dist",
+  "main": "./dist/_worker.js/index.js",
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "./dist"
+  }
 }
