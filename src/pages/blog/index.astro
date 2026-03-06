@@ -6,27 +6,27 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 const posts = await getCollection("blog", ({ data }) => !data.draft);
 ---
 
-<BaseLayout title="Blog | Arda Soyturk">
+<BaseLayout title="Blog | Arda Soytürk">
 	<main class="blog-home">
 		<section class="blog-index">
 			<h1>Blog</h1>
 			<p class="blog-subtitle">Notes, experiments, and writing.</p>
-		{
-			posts.length > 0 ? (
-				<ul class="blog-list">
-					{posts.map((post) => (
-						<li class="blog-list-item">
-							<a href={`/blog/${post.slug}/`}>
-								<strong>{post.data.title}</strong>
-								<span>{post.data.description}</span>
-							</a>
-						</li>
-					))}
-				</ul>
-			) : (
-				<p class="blog-empty">No published posts yet.</p>
-			)
-		}
+			{
+				posts.length > 0 ? (
+					<ul class="blog-list">
+						{posts.map((post) => (
+							<li class="blog-list-item">
+								<a href={`/blog/${post.slug}/`}>
+									<strong>{post.data.title}</strong>
+									<span>{post.data.description}</span>
+								</a>
+							</li>
+						))}
+					</ul>
+				) : (
+					<p class="blog-empty">No published posts yet.</p>
+				)
+			}
 		</section>
 	</main>
 </BaseLayout>

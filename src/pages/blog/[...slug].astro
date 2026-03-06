@@ -18,10 +18,19 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 
-<BaseLayout title={`${post.data.title} | Arda Soyturk`} description={post.data.description}>
+<BaseLayout
+	title={`${post.data.title} | Arda Soytürk`}
+	description={post.data.description}
+>
 	<main class="blog-home">
 		<article class="blog-post">
-			<p class="blog-post-date">{post.data.publishDate.toLocaleDateString("en-US", { dateStyle: "long" })}</p>
+			<p class="blog-post-date">
+				{
+					post.data.publishDate.toLocaleDateString("en-US", {
+						dateStyle: "long",
+					})
+				}
+			</p>
 			<h1>{post.data.title}</h1>
 			<Content />
 		</article>
