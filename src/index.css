@@ -270,8 +270,21 @@
     transition: transform 200ms ease;
   }
 
+  .avatar-frame {
+    @apply relative grid place-items-center;
+  }
+
+  .avatar-glow {
+    @apply pointer-events-none absolute -z-10 h-44 w-44 rounded-full opacity-70 blur-2xl md:h-52 md:w-52;
+    background: radial-gradient(
+      circle,
+      color-mix(in srgb, var(--theme-glow) 52%, transparent) 0%,
+      transparent 68%
+    );
+  }
+
   .profile-avatar:hover {
-    transform: scale(1.03);
+    transform: scale(1.035);
   }
 
   .blog-home {
@@ -395,5 +408,9 @@
 @media (prefers-reduced-motion: reduce) {
   .profile-avatar {
     animation: none;
+  }
+
+  .avatar-glow {
+    opacity: 0.5;
   }
 }

@@ -5,6 +5,8 @@ import App from "@/App";
 import portrait from "@/assets/images/photo.jpg";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
+export const prerender = true;
+
 const avatarWebp = await getImage({
 	src: portrait,
 	width: 192,
