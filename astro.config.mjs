@@ -2,14 +2,15 @@ import { fileURLToPath } from "node:url";
 
 import cloudflare from "@astrojs/cloudflare";
 import mdx from "@astrojs/mdx";
-import react from "@astrojs/react";
+import preact from "@astrojs/preact";
 import tailwindcss from "@tailwindcss/vite";
+
 import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  output: "server",
+  output: "static",
   adapter: cloudflare({ imageService: "compile" }),
-  integrations: [react(), mdx()],
+  integrations: [preact({ compat: true }), mdx()],
   vite: {
     plugins: [tailwindcss()],
     resolve: {

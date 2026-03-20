@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "overrides": {
+    "@preact/preset-vite": "2.9.4"
+  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro check && astro build",
@@ -14,10 +17,13 @@
   "dependencies": {
     "@astrojs/cloudflare": "^12.6.12",
     "@astrojs/mdx": "^4.3.13",
-    "@astrojs/react": "^4.4.2",
+    "@astrojs/preact": "^4.1.2",
+    "react": "npm:@preact/compat",
+    "react-dom": "npm:@preact/compat",
     "@fontsource/ibm-plex-sans": "^5.2.8",
     "@fontsource/newsreader": "^5.2.10",
     "@hugeicons/core-free-icons": "^4.0.0",
+    "@hugeicons/preact": "^1.0.0",
     "@hugeicons/react": "^1.1.5",
     "@radix-ui/react-slot": "^1.2.4",
     "@tailwindcss/vite": "^4.2.1",
@@ -25,8 +31,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.525.0",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
+    "preact": "^10.26.9",
     "tailwind-merge": "^3.5.0",
     "tailwindcss": "^4.2.1"
   },
