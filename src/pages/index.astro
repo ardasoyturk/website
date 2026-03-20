@@ -1,7 +1,7 @@
 ---
 import { getImage } from "astro:assets";
 
-import App from "@/App";
+import App from "@/components/App";
 import portrait from "@/assets/images/photo.jpg";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
@@ -23,5 +23,9 @@ const avatarJpeg = await getImage({
 ---
 
 <BaseLayout>
-	<App client:load avatarWebpSrc={avatarWebp.src} avatarJpegSrc={avatarJpeg.src} />
+	<App
+		client:load
+		avatarWebpSrc={avatarWebp.src}
+		avatarJpegSrc={avatarJpeg.src}
+	/>
 </BaseLayout>
